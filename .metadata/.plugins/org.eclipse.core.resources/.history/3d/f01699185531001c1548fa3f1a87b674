@@ -1,0 +1,28 @@
+
+public class Lotto {
+	public int[] solution(int[] lottos, int[] win_nums) {
+        int tmp = 0;
+        int zero = 0;
+        for(int i=0; i<lottos.length; i++) {
+        	if(lottos[i] == 0) {
+        		zero += 1;
+        	}
+        	for(int j=0; j<win_nums.length; j++) {
+        		if(lottos[i] == win_nums[j]) {
+        			tmp += 1;
+        		}
+        	}
+        }
+        int[] answer = {7 - tmp - zero, 7 - tmp};
+        return answer;
+    }
+	
+	public static void main(String[] args) {
+		int[] lotto = {44, 1, 0, 0, 41, 25};
+		int[] win_nums = {31, 10, 45, 1, 6, 19};
+		
+		Lotto myLotto = new Lotto();
+		int[] s = myLotto.solution(lotto, win_nums);
+		System.out.println(s[0] + s[1]);
+	}
+}
