@@ -7,7 +7,7 @@ public class New_id {
 		new_id = new_id.replaceAll("[^a-z0-9-_.]", "");
 		//3
 		while(new_id.contains("..")) {
-			new_id = new_id.replace("..", "");
+			new_id = new_id.replace("..", ".");
 		}
 		//4
 		if(new_id.substring(0, 1).equals(".")) {
