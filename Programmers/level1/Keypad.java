@@ -25,8 +25,6 @@ public class Keypad {
         		int[] now = {num2.indexOf(n), 1};
         		int dr = Math.abs(r[0]-now[0]) + Math.abs(r[1]-now[1]);
         		int dl = Math.abs(l[0]-now[0]) + Math.abs(l[1]-now[1]);
-        		System.out.println(n+" dr "+dr);
-        		System.out.println(n+" dl "+dl);
         		if(dr > dl || (dr == dl && hand.equals("left"))) {
         			answer += "L";
             		l = now;
